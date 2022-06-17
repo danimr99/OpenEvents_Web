@@ -1,0 +1,42 @@
+.header-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+  gap: 1em;
+}
+
+.header-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  .header-username {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header-profile {
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 0vh;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+  }
+
+  .header-profile.active {
+    height: 15vh;
+    opacity: 1;
+  }
+
+  .header-username {
+    display: inline;
+  }
+}
